@@ -19,7 +19,7 @@ int main() {
 
 	int inputArray[200];
 
-	inputFile.open("input.txt", std::ifstream::in);
+	inputFile.open("src/01/input.txt", std::ifstream::in);
 	if (inputFile.is_open()) {
 		while (std::getline(inputFile, inputLine)) {
 			std::cout << inputLine << '\n';
