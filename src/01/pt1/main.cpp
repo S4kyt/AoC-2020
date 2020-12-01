@@ -1,5 +1,5 @@
 // Advent of Code
-// Day 1: Report Repair
+// Day 1: Report Repair - Part 1/2
 //
 // Submission by S4kyt
 
@@ -47,6 +47,12 @@ int main() {
 
 		if (answerSum == 2020)
 		{
+			std::cout << "Day 1 - Challenge 1 / 2 - Completed!" << std::endl;
+
+			int calendarKey = (*currentPtr) * (*nextPtr);
+
+			std::cout << '\n';
+			std::cout << "The answer ultimately is: " << calendarKey << std::endl;
 			std::cout << '\n';
 			std::cout << *currentPtr << " + " << *nextPtr << std::endl;
 			std::cout << '\n';
@@ -54,25 +60,14 @@ int main() {
 			break;
 		}
 
-		if (currentPtr == endPtr)
-		{
+		if (currentPtr == endPtr) {
 			nextPtr++;
 			currentPtr = startPtr;
-
-			if (nextPtr == endPtr)
-			{
+			if (nextPtr == endPtr) {
 				std::cout << "nextPtr reached the nullptr." << std::endl;
 			}
 		}
 		currentPtr++;
 	}
-
-	std::cout << "Day 1 - Challenge 1 / 2 - Completed!" << std::endl;
-
-	int calendarKey = (*currentPtr) * (*nextPtr);
-
-	std::cout << '\n';
-	std::cout << "The answer ultimately is: " << calendarKey << std::endl;
-
 	return 0;
 }
